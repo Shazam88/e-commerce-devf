@@ -1,12 +1,12 @@
 import './App.css';
 import { Home } from './pages/Home';
-import { Login } from './pages/Login';
-import { Singup } from './pages/Singup';
+import { Login } from './components/Login/login';
+import { Signup } from './components/SignUp/signup';
 import { ProductDetail } from './pages/ProductDetail';
 import { CreateProduct } from './pages/CreateProduct';
 import { NavBar } from './components/NavBar/NavBar';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import { API } from './components/API/API';
+//import { API } from './components/API/API';
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
             <Login/>
           </Route>
           <Route exact path="/sing-up">
-            <Singup/>
+            <Signup/>
           </Route>
           <Route exact path="/product-detail">
             <ProductDetail/>

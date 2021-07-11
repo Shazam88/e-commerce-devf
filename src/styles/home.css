@@ -1,3 +1,6 @@
+.cContainer > div {
+    margin-top: 60px;
+}
 section {
     position: relative;
     width: 100%;
@@ -14,7 +17,7 @@ section:before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #090979, #00d4ff);
+    background: linear-gradient(45deg, #01014b, #00c5f0);
     border-radius: 0 0 100% 50% / 0 0 0% 50%;
 }
 section .content {
@@ -42,6 +45,7 @@ section .content p {
     margin: 0 auto;
     position: relative;
 }
+
 .card {
     background-color: rgba(255, 255, 255, 0.1);
     z-index: 1;
@@ -55,16 +59,28 @@ section .content p {
 .question {
     padding: 30px;
 }
-.reticula, .reticula .row > div {
-    padding-right: 0;
-    padding-left: 0;
-}
 .img-table {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 500px;
 }
+.about {
+    min-height: 400px; 
+    background-attachment: fixed;
+}
+.contaImg,.iCommerce {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.tinfoCommerce {
+    padding: 35px;
+}
+.tinfoCommerce span {
+    color: #f02425;
+    font-size: 35px;
+}
+
 /* Small Devices, Nav */
 @media (max-width : 767px) {
 .content > div {
@@ -77,7 +93,18 @@ section .content p {
     display: block;
 }
 .cCards .card {
-    margin: 20px auto;
+    margin: 50px auto;
+    width: 100%;
+}
+.card-text {
+    font-size: 20px;
+}
+.contaImg,.iCommerce {
+    background-size: contain;
+    
+}
+.iCommerce {
+    padding-top: 75%;
 }
 }
 /* Medium Devices to Large Devices */
@@ -99,25 +126,33 @@ section .content p {
     justify-content: space-evenly;
     align-items: end;
 }
+.cCards .card {
+    width: 15rem;
 }
-
-.about {
-    /* The image used */
-    
-  
-    /* Set a specific height */
-    min-height: 400px; 
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+.iCommerce {
     background-size: cover;
-  }
-  .contaImg {
-    background-image: url(https://images.pexels.com/photos/115655/pexels-photo-115655.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      
-  }
+}
+.iCommerce {
+    padding-top: 20%;
+}
+.icOrder {
+    order: 2;
+}
+.tiOrder {
+    order: 1;
+}
+}
+/* Large Devices, Wide Screens */
+@media (min-width : 768px) and (max-width : 1335px) {
+.contaImg {
+    background-size: contain;
+    
+}
+}
+/* Large Devices, Wide Screens */
+@media (min-width : 1336px) {
+.contaImg {
+    background-size: cover;
+    
+}
+}

@@ -34,7 +34,6 @@ function App() {
             <CreateProduct/>
           </Route>
         </Switch>
-        <API/>
       </div>
     </Router>
     

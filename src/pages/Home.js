@@ -4,7 +4,7 @@ import './../styles/home.css'
 
 export const Home = () => {
     return (
-        <div>
+        <div className="cContainer">
             <section>
                 <div className="content">
                     <div className="title">
@@ -21,19 +21,19 @@ export const Home = () => {
             </section>
             <div className="container">
                 <div className="cCards">
-                    <div className="card" style={{ width: "15rem", padding: "15px" }}>
+                    <div className="card" style={{ padding: "15px" }}>
                         <img src="./../../home.svg" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <p className="card-text">Manera segura de realizar compras desde casa.</p>
                         </div>
                     </div>
-                    <div className="card" style={{ width: "15rem", padding: "15px" }}>
+                    <div className="card" style={{ padding: "15px" }}>
                         <img src="./../../money.svg" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <p className="card-text">Nosotros sí cuidamos tu dinero con mejores precios.</p>
                         </div>
                     </div>
-                    <div className="card" style={{ width: "15rem", padding: "15px" }}>
+                    <div className="card" style={{ padding: "15px" }}>
                         <img src="./../../people.svg" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <p className="card-text">Siempre con las mejores medidas de seguridad.</p>
@@ -41,24 +41,25 @@ export const Home = () => {
                     </div>
                 </div>
             </div>
-            
-            <div className="container-fluid reticula">
-                <div className="row">
-
-                <div class="about contaImg"></div>
-                    
-
+            <div className="content">
+                <div className="iCommerce" style={{backgroundImage: "url(./../../e-commerce.jpg)"}}>
 
                 </div>
+                <div className="tinfoCommerce">
+                    <h3>Somos <span>la mejor Web</span> para que realices tus compras de manera <span>fácil y segura</span>.</h3>
+                </div>
             </div>
-            <div className="container">
-                <div className="cVideo">
-                    <div>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/I26xiKYK-cc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div className="question">
-                        <h3>¿Qué es un e-commerce?</h3>
-                    </div>
+            <div className="container-fluid reticula">
+                <div className="row">
+                    <div class="about contaImg" style={{backgroundImage: "url(./../../payment.jpg)"}}></div>
+                </div>
+            </div>
+            <div className="content">
+                <div className="iCommerce icOrder" style={{backgroundImage: "url(./../../banner2.png)"}}>
+
+                </div>
+                <div className="tinfoCommerce tiOrder">
+                    <h3>Somos <span>la mejor Web</span> para que realices tus compras de manera <span>fácil y segura</span>.</h3>
                 </div>
             </div>
         </div>

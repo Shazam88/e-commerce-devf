@@ -1,5 +1,6 @@
 import React from 'react'
 import './../styles/home.css'
+import { Link } from 'react-router-dom';
 
 
 export const Home = () => {
@@ -13,6 +14,7 @@ export const Home = () => {
                             Commodi ex placeat nemo itaque soluta.
                             Sunt soluta quam tenetur illum commodi debitis dolores libero ipsum ipsa?
                             Voluptatum tenetur ea consectetur in?</p>
+                            <button type="button" className="btn btn-outline-info"><Link to="/login">Login</Link></button>
                     </div>
                     <div className="img-MobDesk">
                         <img src="./../../banner-home.png" alt="..." />
@@ -59,7 +61,7 @@ export const Home = () => {
 
                 </div>
                 <div className="tinfoCommerce tiOrder">
-                    <h3>Somos <span>la mejor Web</span> para que realices tus compras de manera <span>fácil y segura</span>.</h3>
+                    <h3>Encontrarás <span>los mejores artículos</span> del momento <span>al mejor precio</span>.</h3>
                 </div>
             </div>
         </div>

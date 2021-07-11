@@ -40,6 +40,14 @@ section .content p {
 .title {
     padding: 20px;
 }
+.title .btn a {
+    color: #fff;
+    text-decoration: none;
+}
+.title .btn:hover a {
+    color: #041b60;
+    text-decoration: none;
+}
 .cCards {
     top: -100px;
     margin: 0 auto;
@@ -80,7 +88,10 @@ section .content p {
     color: #f02425;
     font-size: 35px;
 }
-
+.tiOrder span {
+    color: #041b60;
+     font-size: 35px;
+}
 /* Small Devices, Nav */
 @media (max-width : 767px) {
 .content > div {

@@ -43,17 +43,26 @@ export const Home = () => {
                     </div>
                 </div>
             </div>
+            
+            <div className=" cBuy">
+                <div className="iShop">
+                    <img src="./../../shopping.jpg" />
+                </div>
+                <div className="btnShop">
+                    <button type="button" class="btn btn-outline-danger"><Link to="/products">Nuestros productos</Link></button>
+                </div>
+            </div>
+            <div className="container-fluid reticula">
+                <div className="row">
+                    <div class="about contaImg" style={{backgroundImage: "url(./../../payment.jpg)"}}></div>
+                </div>
+            </div>
             <div className="content">
                 <div className="iCommerce" style={{backgroundImage: "url(./../../e-commerce.jpg)"}}>
 
                 </div>
                 <div className="tinfoCommerce">
                     <h3>Somos <span>la mejor Web</span> para que realices tus compras de manera <span>fácil y segura</span>.</h3>
-                </div>
-            </div>
-            <div className="container-fluid reticula">
-                <div className="row">
-                    <div class="about contaImg" style={{backgroundImage: "url(./../../payment.jpg)"}}></div>
                 </div>
             </div>
             <div className="content">

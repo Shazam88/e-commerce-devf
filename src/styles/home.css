@@ -92,6 +92,26 @@ section .content p {
     color: #041b60;
      font-size: 35px;
 }
+.cBuy {
+    position: relative; 
+}
+.iShop {
+    position: relative;
+}
+.btnShop {
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    right: 81px;
+}
+.btnShop .btn a {
+    color: #dc3545;
+    text-decoration: none;
+}
+.btnShop .btn:hover a {
+    color: #fff;
+    text-decoration: none;
+}
 /* Small Devices, Nav */
 @media (max-width : 767px) {
 .content > div {

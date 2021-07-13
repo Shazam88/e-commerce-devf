@@ -2,6 +2,7 @@ import './App.css';
 import { Home } from './pages/Home';
 import { Login } from './components/Login/login';
 import { Signup } from './components/SignUp/signup';
+import { Products } from './components/Products/Products';
 import { ProductDetail } from './pages/ProductDetail';
 import { CreateProduct } from './pages/CreateProduct';
 import { NavBar } from './components/NavBar/NavBar';
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route exact path="/sing-up">
             <Signup/>
+          </Route>
+          <Route exact path="/products">
+            <Products/>
           </Route>
           <Route exact path="/product-detail">
             <ProductDetail/>

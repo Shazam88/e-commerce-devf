@@ -1,6 +1,5 @@
-import './App.css';
 import { Home } from './pages/Home';
-import { Login } from './components/Login/login';
+import { Login } from './components/login/login'
 import { Signup } from './components/SignUp/signup';
 import { Products } from './components/Products/Products';
 import { ProductDetail } from './components/ProductDetail/ProductDetail';

@@ -1,5 +1,6 @@
 import React from 'react'
 import './ProductDetail.css'
+import BannerProducts from './banner-products.png'
 
 export const ProductDetail = () => {
     const [product, setProduct] = React.useState([])
@@ -20,7 +21,7 @@ export const ProductDetail = () => {
     return (
         <div>
             <div>
-                <img src="./../../banner-products.png" alt="..."/>
+                <img src={BannerProducts} alt="..."/>
             </div>
             
             <div className="container cProducts">

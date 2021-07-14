@@ -66,6 +66,7 @@ export const Login = () => {
                     Enviar
                 </button>
                 <p>¿Aún no tienes cuenta? <Link to='/sign-up'>Registrate aquí</Link></p>
+                prueba
                 </Form>
                 )}
         </Formik>

@@ -1,0 +1,189 @@
+.cContainer > div {
+    margin-top: 60px;
+}
+section {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #01014b, #00c5f0);
+    border-radius: 0 0 100% 50% / 0 0 0% 50%;
+}
+section .content {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    text-align: end;
+}
+section .content h1 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 3em;
+
+}
+section .content p {
+    color: #fff;
+    font-size: 1.2em;
+}
+.title {
+    padding: 20px;
+}
+.title .btn a {
+    color: #fff;
+    text-decoration: none;
+}
+.title .btn:hover a {
+    color: #041b60;
+    text-decoration: none;
+}
+.cCards {
+    top: -100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.cCards .card img {
+    width: 50%;
+    margin: auto;
+}
+.question {
+    padding: 30px;
+}
+.img-table {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+}
+.about {
+    min-height: 400px; 
+    background-attachment: fixed;
+}
+.contaImg,.iCommerce {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.tinfoCommerce {
+    padding: 35px;
+}
+.tinfoCommerce span {
+    color: #f02425;
+    font-size: 35px;
+}
+.tiOrder span {
+    color: #041b60;
+     font-size: 35px;
+}
+.cBuy {
+    position: relative; 
+}
+.iShop {
+    position: relative;
+}
+.btnShop {
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    right: 81px;
+}
+.btnShop .btn a {
+    color: #dc3545;
+    text-decoration: none;
+}
+.btnShop .btn:hover a {
+    color: #fff;
+    text-decoration: none;
+}
+/* Small Devices, Nav */
+@media (max-width : 767px) {
+.content > div {
+    width: 100%;
+}
+.img-MobDesk{
+    display: none;
+}
+.cCards{
+    display: block;
+}
+.cCards .card {
+    margin: 50px auto;
+    width: 100%;
+}
+.card-text {
+    font-size: 20px;
+}
+.contaImg,.iCommerce {
+    background-size: contain;
+    
+}
+.iCommerce {
+    padding-top: 75%;
+}
+}
+/* Medium Devices to Large Devices */
+@media (min-width : 768px){
+.content,
+.cVideo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content > div {
+    width: 50%;
+}
+.img-MobDesk {
+    display: block;
+} 
+.cCards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+}
+.cCards .card {
+    width: 15rem;
+}
+.iCommerce {
+    background-size: cover;
+}
+.iCommerce {
+    padding-top: 20%;
+}
+.icOrder {
+    order: 2;
+}
+.tiOrder {
+    order: 1;
+}
+}
+/* Large Devices, Wide Screens */
+@media (min-width : 768px) and (max-width : 1335px) {
+.contaImg {
+    background-size: contain;
+    
+}
+}
+/* Large Devices, Wide Screens */
+@media (min-width : 1336px) {
+.contaImg {
+    background-size: cover;
+    
+}
+}

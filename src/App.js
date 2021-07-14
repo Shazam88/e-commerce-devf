@@ -1,17 +1,5 @@
-import './App.css';
-<<<<<<< HEAD
-//import { Login } from './components/login/login';
-import { Signup } from './components/sign-up/signup';
-
-function App() {
-  return (
-    <div className="App">
-      <Signup/>
-     
-    </div>
-=======
 import { Home } from './pages/Home';
-import { Login } from './components/Login/login';
+import { Login } from './components/login/login'
 import { Signup } from './components/SignUp/signup';
 import { Products } from './components/Products/Products';
 import { ProductDetail } from './components/ProductDetail/ProductDetail';
@@ -54,7 +42,6 @@ function App() {
       </div>
     </Router>
     
->>>>>>> c8388c08cb4ed5fb5f162b458eacd9416ed37c83
   );
 }
 

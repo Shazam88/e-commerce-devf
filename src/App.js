@@ -14,7 +14,7 @@ import { Home } from './pages/Home';
 import { Login } from './components/Login/login';
 import { Signup } from './components/SignUp/signup';
 import { Products } from './components/Products/Products';
-import { ProductDetail } from './pages/ProductDetail';
+import { ProductDetail } from './components/ProductDetail/ProductDetail';
 import { CreateProduct } from './pages/CreateProduct';
 import { NavBar } from './components/NavBar/NavBar';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';

@@ -1,0 +1,16 @@
+.cProducts {
+    margin-top: 60px;
+}
+
+.cProducts .card {
+    background: #fff;
+    padding: 15px;
+    margin-top: 50px;
+}
+.cProducts .card img{
+    height: 250px;
+    object-fit: cover;
+}
+.cProducts .card-body {
+    background-color: #fff;
+}

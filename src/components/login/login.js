@@ -1,6 +1,6 @@
 import React from 'react'
 import './login.css'
-import image from './images/image.jpg'
+import image from './images/image-login.jpg'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'

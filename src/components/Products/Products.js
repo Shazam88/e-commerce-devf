@@ -1,5 +1,6 @@
 import React from 'react'
 import './Products.css'
+import BannerProducts from './../ProductDetail/banner-products.png'
 import PropTypes from "prop-types";
 
 export const Products = () => {
@@ -23,7 +24,7 @@ export const Products = () => {
     return (
         <div>
             <div>
-                <img src="./../../banner-products.png" alt="..."/>
+                <img src={BannerProducts} alt="..."/>
             </div>
             <div className="container cProducts">
                 <div className="row">
@@ -35,7 +36,7 @@ export const Products = () => {
                                 <div className="card-body">
                                     <h5>{item.product_name}</h5>
                                     <p><span className="price">${item.price}</span></p>
-                                    <a className="btn btn-outline-dark" >Detalles</a>
+                                    <a className="btn btn-outline-dark" href="#">Detalles</a>
                                 </div>
                             </div>
                             

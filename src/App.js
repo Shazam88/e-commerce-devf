@@ -1,5 +1,6 @@
+import './App.css'
 import { Home } from './pages/Home';
-import { Login } from './components/login/login'
+import { Login } from './components/Login/login'
 import { Signup } from './components/SignUp/signup';
 import { Products } from './components/Products/Products';
 import { ProductDetail } from './components/ProductDetail/ProductDetail';
@@ -9,6 +10,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 //import { API } from './components/API/API';
 import { Footer } from './components/Footer/Footer';
 
+
 function App() {
   return (
     <Router>
@@ -16,18 +18,11 @@ function App() {
         <NavBar/>
 
         <Switch>
-        <Route exact path="/">
-            <Home/>
-          </Route>
-          <Route path="/home">
-            <Home/>
-          </Route>
-          <Route path="/login">
-            <Login/>
-          </Route>
-          <Route exact path="/sign-up">
-            <Signup/>
-          </Route>
+          <Route exact path="/" component={Login}/>
+          <Route path="/home" component={Home} />
+          <Route path="/login" component={Login}/>
+          <Route exact path="/sign-up" component={Signup}/>
+
           <Route exact path="/products">
             <Products/>
           </Route>

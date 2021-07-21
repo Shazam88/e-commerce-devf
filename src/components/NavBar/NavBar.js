@@ -24,9 +24,6 @@ export const NavBar = () => {
               <li className="nav-item">
                 <Link className="btn btn-outline-success justify-content-end" to="/login">Login</Link>
               </li>
-              <li className="nav-item">
-                <Link className="btn btn-outline-success justify-content-end" to="/login">Prueba</Link>
-              </li>
 
               <li className="nav-item2">
                 <Link className="btn btn-outline-warning justify-content-end" to="/sing-up">Sign up</Link>

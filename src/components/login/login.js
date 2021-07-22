@@ -4,7 +4,7 @@ import image from './images/image-login.jpg'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 
 const MySwal = withReactContent(Swal)
 
@@ -79,7 +79,7 @@ export const Login = () => {
                 <button type="submit" >
                     Enviar
                 </button>
-                <p>¿Aún no tienes cuenta? Registrate aquí</p>
+                <p>¿Aún no tienes cuenta? Registrate <Link to="/sign-up">aquí</Link></p>
                 </Form>
                 )}
         </Formik>

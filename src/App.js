@@ -9,6 +9,7 @@ import { NavBar } from './components/NavBar/NavBar';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 //import { API } from './components/API/API';
 import { Footer } from './components/Footer/Footer';
+import Detail from './components/Detail';
 
 
 function App() {
@@ -18,13 +19,16 @@ function App() {
         <NavBar/>
 
         <Switch>
+        
           <Route exact path="/" component={Login}/>
           <Route path="/home" component={Home} />
           <Route path="/login" component={Login}/>
           <Route exact path="/sign-up" component={Signup}/>
-
           <Route exact path="/products">
             <Products/>
+          </Route>
+          <Route path="/products/:id">
+            <Detail />
           </Route>
           <Route exact path="/product-detail">
             <ProductDetail/>

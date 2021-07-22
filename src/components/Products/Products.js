@@ -1,10 +1,9 @@
 import React from 'react'
 import './Products.css'
 import BannerProducts from './../ProductDetail/banner-products.png'
-import PropTypes from "prop-types";
+import { Link } from 'react-router-dom'
 
 export const Products = () => {
-
 
     const [product, setProduct] = React.useState([])
 
@@ -15,9 +14,9 @@ export const Products = () => {
 
     const infoAPI = async () => {
         const data = await fetch('https://ecomerce-master.herokuapp.com/api/v1/item')
-        const products = await data.json()
+        const productos = await data.json()
         //console.log(products);
-        setProduct(products)
+        setProduct(productos)
     }
 
 
@@ -31,17 +30,14 @@ export const Products = () => {
                 {
                     product.map(item => (
                         <div className="col-lg-3 col-md-4 col-sm-6">
-                            <div className="card " key={item._id} style={{width: "100%"}}>
-                                <img src={item.image} class="card-img-top" alt="..."/>
+                            <div className="card" key={item._id} style={{width: "100%"}}>
+                                <img src={item.image} className="card-img-top" alt="..."/>
                                 <div className="card-body">
                                     <h5>{item.product_name}</h5>
                                     <p><span className="price">${item.price}</span></p>
-                                    <a className="btn btn-outline-dark" href="#">Detalles</a>
+                                    <Link to={`/products/${item._id}`} className="btn btn-outline-dark">Detalles</Link>
                                 </div>
                             </div>
-                            
-                                
-
                         </div>
                     ))
                 }
@@ -50,9 +46,3 @@ export const Products = () => {
          </div>
     )
 };
-
-Products.propTypes = {
-   product_name: PropTypes.string.isRequired,
-    _id: PropTypes.number.isRequired,
-    image: PropTypes.string,
-  };

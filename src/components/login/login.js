@@ -4,17 +4,53 @@ import image from './images/image-login.jpg'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import { Redirect } from 'react-router-dom';
 
 const MySwal = withReactContent(Swal)
 
-const log = {
-    mail: 'prueba@prueba.com',
-    password: '123'
-}
-
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
 export const Login = () => {
+    const handleSubmit = (values) => {
+        const {email, password} = values;
+        console.log(values);
+        fetch('https://ecomerce-master.herokuapp.com/api/v1/login', 
+            {
+                method:'POST',
+                body: JSON.stringify({email , password}),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }
+        ).then(resp=>{
+            if (resp.ok){
+                MySwal.fire({
+                    title: 'Bienvenido',
+                    text: 'Te estabamos esperando!',
+                    icon: 'success',
+                    confirmButtonText: 'Entendido',
+                    confirmButtonColor: '#00dfc0'
+                  })
+            }else{
+                console.log('invalido');
+                MySwal.fire({
+                    title: 'Ups..',
+                    text: 'Usuario o contraseñas invalidos',
+                    icon: 'warning',
+                    confirmButtonText: 'Entendido',
+                    confirmButtonColor: '#00dfc0'
+                  })
+            }
+            return resp.json()
+        }).then((data)=>{
+            const {role, token} = data
+                localStorage.setItem('token', token)
+                localStorage.setItem('role', role)
+        })
+    }
+
+    if(localStorage.getItem('token')){
+        return <Redirect to="/home" />
+    }
+
     return (
         <div className='container-login'>
         <Formik
@@ -30,30 +66,9 @@ export const Login = () => {
                 }
                 return errors;
             }}
-            onSubmit={async (values) => {
-                await sleep(500);
-                if (values.email === log.mail && values.password === log.password){
-                    console.log(values);
-                    MySwal.fire({
-                        title: 'Bienvenido',
-                        text: 'Te estabamos esperando!',
-                        icon: 'success',
-                        confirmButtonText: 'Entendido',
-                        confirmButtonColor: '#00dfc0'
-                      })
-                }else{
-                    console.log('invalido');
-                    MySwal.fire({
-                        title: 'Ups..',
-                        text: 'Usuario o contraseñas invalidos',
-                        icon: 'warning',
-                        confirmButtonText: 'Entendido',
-                        confirmButtonColor: '#00dfc0'
-                      })
-                }
-              }}
+            onSubmit={handleSubmit}
             >
-            {({ isSubmitting }) => (
+            {() => (
                 
                 <Form>
                 <h1>Hola, bienvenido de vuelta!</h1>
@@ -61,7 +76,7 @@ export const Login = () => {
                 <ErrorMessage className='error' name="email" component="div" />
                 <Field placeholder='Ingresa tu contraseña' className='field' type="password" name="password" />
                 <ErrorMessage className='error' name="password" component="div" />
-                <button type="submit" disabled={isSubmitting}>
+                <button type="submit" >
                     Enviar
                 </button>
                 <p>¿Aún no tienes cuenta? Registrate aquí</p>

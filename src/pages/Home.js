@@ -49,12 +49,12 @@ export const Home = () => {
                     <img src="./../../shopping.jpg" />
                 </div>
                 <div className="btnShop">
-                    <button type="button" class="btn btn-outline-danger"><Link to="/products">Nuestros productos</Link></button>
+                    <button type="button" className="btn btn-outline-danger"><Link to="/products">Nuestros productos</Link></button>
                 </div>
             </div>
             <div className="container-fluid reticula">
                 <div className="row">
-                    <div class="about contaImg" style={{backgroundImage: "url(./../../payment.jpg)"}}></div>
+                    <div className="about contaImg" style={{backgroundImage: "url(./../../payment.jpg)"}}></div>
                 </div>
             </div>
             <div className="content">

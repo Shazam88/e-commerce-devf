@@ -3,6 +3,7 @@ import './ProductDetail.css'
 import BannerProducts from './banner-products.png'
 
 
+
 export const ProductDetail = () => {
     const [product, setProduct] = React.useState([])
     const [mostrarModal, setMostrarModal] = React.useState(false)

@@ -26,7 +26,7 @@ export const NavBar = () => {
               </li>
 
               <li className="nav-item2">
-                <Link className="btn btn-outline-warning justify-content-end" to="/sing-up">Sign up</Link>
+                <Link className="btn btn-outline-warning justify-content-end" to="/sign-up">Sign up</Link>
               </li>
             </ul>
           </div>
